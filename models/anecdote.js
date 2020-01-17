@@ -7,7 +7,11 @@ const anecdoteSchema = mongoose.Schema({
   content: {type: String, required: true, unique: true},
   author: {type: String},
   info: {type: String, required: true, unique: true},
-  votes: Number
+  votes: Number,
+  user : {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  }
 })
 
 anecdoteSchema.set('toJSON', {

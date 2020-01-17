@@ -1,8 +1,8 @@
-POST http://localhost:3000/api/anecdotes
+POST http://localhost:3003/api/anecdotes
 content-type: application/json
 
 {
-  "content": "If it hurts, do it more often",
-  "author": "Jez Humble",
-  "info": "https://martinfowler.com/bliki/FrequencyReducesDifficulty.html"
+  "content": "If it hurts, do it more often111",
+  "author": "Jez Humble111",
+  "info": "https://martinf111owler.com/bliki/FrequencyReducesDifficulty.html"
 }

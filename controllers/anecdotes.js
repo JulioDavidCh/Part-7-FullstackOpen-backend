@@ -37,7 +37,7 @@ anecdoteRouter.post('/', async (req, res, next) => {
     const anecdoteToAdd = new Anecdote(newAnecdoteToAdd)
     const addedAnecdote = await anecdoteToAdd.save(newAnecdoteToAdd)
 
-    res.status(201).json(addedAnecdote.toJSON())
+    res.status(201).json(addedAnecdote)
 
   }catch(exception){
     next(exception)
