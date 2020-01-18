@@ -13,6 +13,21 @@ const morganMiddleware = morgan(function (tokens, req, res) {
   ].join(' ')
 })
 
+const getTokenFrom = request => {
+  const authorization = request.get('authorization')
+  if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
+    return authorization.substring(7)
+  }
+  return null
+}
+
+const tokenExtractor = (req, res, next) => {
+  const token = getTokenFrom(req)
+  req.token = token
+  next()
+}
+
 module.exports = {
-  morganMiddleware
+  morganMiddleware,
+  tokenExtractor
 }

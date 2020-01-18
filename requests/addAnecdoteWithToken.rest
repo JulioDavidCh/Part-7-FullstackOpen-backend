@@ -1,0 +1,9 @@
+post http://localhost:3003/api/anecdotes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdhYiIsImlkIjoiNWUyMGUxMTY3MzQxOWIwNDc4ZTkwYmVhIiwiaWF0IjoxNTc5Mjg2NjI1fQ.8AoNHCLICE1R4rEW8FApgT-S4RH4vAKrRifj7kLSlcw
+
+{
+  "content": "If it hurts, do it more often",
+  "author": "Jez Humble",
+  "info": "https://martinfowler.com/bliki/FrequencyReducesDifficulty.html"
+}
